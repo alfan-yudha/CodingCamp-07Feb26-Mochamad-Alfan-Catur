@@ -1,47 +1,37 @@
+Y–PASTE index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Todo List - Mini Project</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List - Yama</title>
+
+  <!-- CSS External -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Todo List</h1>
+  <!-- Header Content -->
+  <header>
+     <h1 class="text-2xl font-bold text-center">Todo List - Yama</h1>
+      </header>
 
-    <!-- Form -->
-    <form id="todo-form">
-      <input type="text" id="todo-input" placeholder="Add new task..." />
-      <input type="date" id="date-input" />
-      <button type="submit">+</button>
-    </form>
-
-    <!-- Action -->
-    <div class="actions">
-      <button id="filter-btn">Filter</button>
-      <button id="delete-all-btn" class="danger">Delete All</button>
-    </div>
-
-    <!-- Table -->
-    <table>
-      <thead>
-        <tr>
-          <th>Task</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="todo-list">
-        <tr>
-          <td colspan="4" class="empty">No task found</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
+  <!-- Main Content -->
+  <main>
+     <!-- Form Section -->
+    <section>
+       <!-- Todo Input -->
+        <input class="border p-2 rounded"type="text" id="todo-input"placeholder="Enter a new todo item">
+        <!-- Date Input -->
+        <input class="border p-2 rounded"type="date" id="todo-date"placeholder="Enter due date">
+         <!-- Add Button -->
+        <button  class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"type="button"onclick="addTodo()">Add Todo</button>
+        </section>
+        <!-- Action Section -->
+    <section class="flex pt-2 justify-between">
+      <button class="border rounded p-2 bg-red-600 text-white"onclick=" Clear All Todos</button>
+      </section>
+      
