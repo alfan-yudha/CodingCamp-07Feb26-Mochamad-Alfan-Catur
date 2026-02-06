@@ -56,12 +56,16 @@ function renderTodos() {
 }
 
 // Delete all todos
-function deleteAllTodos() {
+function clearAllTodos() {
   todos = [];
   renderTodos();
 }
 
 // Filter todos (placeholder)
 function filterTodos() {
-  // To be implemented
+  if (todos.length === 0) return;
+
+  todos.sort((a, b) => new Date(a.date) - new Date(b.date));
+  renderTodos();
 }
+
