@@ -1,10 +1,10 @@
-Y–PASTE index.html
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List - Yama</title>
+  <title>Todo List - Alfan</title>
 
   <!-- CSS External -->
   <link rel="stylesheet" href="css/style.css">
@@ -12,26 +12,56 @@ Y–PASTE index.html
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
 
+<body>
   <!-- Header Content -->
   <header>
-     <h1 class="text-2xl font-bold text-center">Todo List - Yama</h1>
+     <h1 class="text-2xl font-bold pb-8">Todo List - Alfan</h1>
       </header>
 
   <!-- Main Content -->
   <main>
      <!-- Form Section -->
     <section>
+      <form>
        <!-- Todo Input -->
-        <input class="border p-2 rounded"type="text" id="todo-input"placeholder="Enter a new todo item">
+        <input class="border p-2 rounded" type="text" id="todo-input"placeholder="Enter a new todo item">
+       
         <!-- Date Input -->
-        <input class="border p-2 rounded"type="date" id="todo-date"placeholder="Enter due date">
-         <!-- Add Button -->
-        <button  class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"type="button"onclick="addTodo()">Add Todo</button>
+        <input class="border p-2 rounded" type="date" id="todo-date"placeholder="Enter due date">
+         
+        <!-- Add Button -->
+        <button  class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onclick="addTodo()" type="button"onclick="addTodo()">Add Todo</button>
         </section>
+
         <!-- Action Section -->
     <section class="flex pt-2 justify-between">
-      <button class="border rounded p-2 bg-red-600 text-white"onclick=" Clear All Todos</button>
+      <button class="border rounded p-2 bg-red-500 text-white">Clear All Todos</button>
       </section>
-      
+       <!-- Filter Options -->
+        <button class="border rounded p-2 bg-blue-500 text-white">Filter Todos</button>
+</section>
+
+  <!-- Todo List Section -->
+    <section class="pt-2">
+      <header>
+         <h1 class="text-xl font-semibold">List of Todos</h1>
+      </header>
+      <ul class="pt-2" id="todo-list">
+        <!-- Todo Items Will Be Dynamicaly Added Here-->
+         <li>No Todos Available</li>
+      </ul>
+       </section>
+
+  </main>
+   <!-- Footer Content -->
+  <footer class="pt-8">
+    <p class="text-center text-gray-500">
+      © 2026 Alfan's Todo App
+    </p>
+  </footer>
+
+  <!-- Javascript External -->
+  <script src="js/script.js"></script>
+</body>
+</html>
